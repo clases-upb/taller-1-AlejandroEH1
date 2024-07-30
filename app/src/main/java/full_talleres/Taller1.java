@@ -122,14 +122,14 @@ public class Taller1 {
    el número de minutos y número segundos como enteros bytes, positivos y devuelva todo en segundos en un entero. 
    Si hay algún error, devuelva -1.
    */
-  public static int Calcular_segs (byte dias, byte horas, byte minutos, byte segundos){ 
+  public static int Calcular_segs (int dias, int horas, int minutos, int segundos){ /*Al no poder establecer las variables dias, horas, minutos y segundos como bytes, recurro por el uso de int, Nota: no estoy seguro si esto cumple con el enunciado*/
     try {
             if (dias<0 || horas<0 || minutos<0 || segundos < 0) {
                 return -1;
             }
 
-            byte a = 24;
-            byte b = 60;
+            final byte a = 24;
+            final byte b = 60;
 
             int seg_dias = (dias*a*b*b);
             int seg_horas = (horas*b*b);
